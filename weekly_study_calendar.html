@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박두환 투자동행학교 주간 학습 캘린더</title>
+<style>
+:root{
+  --navy:#1a2b4a;--gold:#c9a44c;--gold2:#f0c96e;
+  --ink:#1f2733;--muted:#6b7686;--line:#e4e7ec;--bg:#f6f7f9;--card:#fff;
+  --green:#1d9e75;--blue:#378add;--red:#e24b4a;--amber:#ba7517;--purple:#534ab7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  background:var(--bg);color:var(--ink);padding:20px 16px;line-height:1.6}
+.wrap{max-width:860px;margin:0 auto}
+
+.head{background:var(--navy);color:#fff;border-radius:14px;padding:24px 28px;margin-bottom:18px}
+.head h1{font-size:22px;font-weight:700;margin-bottom:6px}
+.head p{font-size:13px;color:#aebbd2}
+.badges{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.badge{background:rgba(255,255,255,.08);border:1px solid rgba(201,164,76,.5);
+  color:var(--gold2);font-size:12px;padding:3px 10px;border-radius:20px}
+
+/* 원칙 카드 */
+.principle{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:18px 22px;margin-bottom:16px}
+.principle h2{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:12px;
+  display:flex;align-items:center;gap:8px}
+.principle h2::before{content:"";width:4px;height:15px;background:var(--gold);border-radius:2px}
+.p-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.p-item{display:flex;align-items:flex-start;gap:10px;font-size:13px}
+.p-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;
+  background:var(--navy);color:#fff;font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;margin-top:1px}
+.p-text{color:#3a4553;line-height:1.6}
+
+/* 주간 캘린더 */
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:16px}
+@media(max-width:600px){.calendar{grid-template-columns:repeat(2,1fr)}}
+.day-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 12px}
+.day-card.weekend{background:#f0f7ff;border-color:#b5d4f4}
+.day-card.saturday{background:#fffbf0;border-color:#f0d89a}
+.day-card.sunday{background:#f0faf5;border-color:#9fe1cb}
+.day-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:10px;
+  padding-bottom:8px;border-bottom:1px solid var(--line)}
+.day-card.weekend .day-name{color:#185fa5}
+.day-card.saturday .day-name{color:var(--amber)}
+.day-card.sunday .day-name{color:#0f6e56}
+.time-block{margin-bottom:8px}
+.time-label{font-size:10px;font-weight:600;color:var(--muted);margin-bottom:3px}
+.task{font-size:11px;color:#3a4553;background:#f8f9fb;border-radius:5px;
+  padding:5px 8px;margin-bottom:3px;line-height:1.5;border-left:2px solid var(--line)}
+.task.morning{border-color:var(--amber)}
+.task.evening{border-color:var(--blue)}
+.task.weekend-main{border-color:var(--green);background:#f0faf5}
+.task.weekend-sub{border-color:var(--purple);background:#f5f3ff}
+.task-icon{margin-right:3px}
+
+/* 시리즈 가이드 */
+.series-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+@media(max-width:500px){.series-grid{grid-template-columns:1fr}}
+.series-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.series-name{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.series-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.series-desc{font-size:12px;color:#3a4553;line-height:1.6}
+.series-when{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;
+  border-radius:4px;margin-top:6px}
+.when-morning{background:#fef3cd;color:#856404}
+.when-evening{background:#e8f1fb;color:#185fa5}
+.when-weekend{background:#e9f5df;color:#3b6d11}
+
+/* 모델 가이드 */
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+@media(max-width:500px){.model-grid{grid-template-columns:1fr}}
+.model-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.model-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.model-use{font-size:12px;color:var(--muted);margin-bottom:4px}
+.model-desc{font-size:12px;color:#3a4553;line-height:1.6}
+.model-badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;
+  border-radius:4px;margin-top:4px;background:#eef6ff;color:#185fa5}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:18px 22px;margin-bottom:16px}
+.card h2{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:12px;
+  display:flex;align-items:center;gap:8px}
+.card h2::before{content:"";width:4px;height:15px;background:var(--gold);border-radius:2px}
+
+.foot{text-align:center;font-size:12px;color:var(--muted);padding:16px 0 8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- 헤더 -->
+<div class="head">
+  <h1>📚 박두환 투자동행학교 주간 학습 캘린더</h1>
+  <p>입문자 맞춤 · 한국+미국 · 중기(6개월~1년) 목표</p>
+  <div class="badges">
+    <span class="badge">🌅 평일 아침 07-08시</span>
+    <span class="badge">🌙 평일 저녁 21-22시</span>
+    <span class="badge">📖 주말 각 3시간</span>
+  </div>
+</div>
+
+<!-- 3대 원칙 -->
+<div class="principle">
+  <h2>입문자 3대 원칙</h2>
+  <ul class="p-list">
+    <li class="p-item">
+      <div class="p-num">1</div>
+      <div class="p-text"><strong>아침수업을 절대 건너뛰지 않는다</strong> — 하루 6~8분. 그날의 시장 관점과 마인드셋을 잡는 루틴의 닻입니다.</div>
+    </li>
+    <li class="p-item">
+      <div class="p-num">2</div>
+      <div class="p-text"><strong>주식 단어장을 꾸준히 쌓는다</strong> — 매주 5개 용어. 1년이면 260개. 강의 이해도가 달라집니다.</div>
+    </li>
+    <li class="p-item">
+      <div class="p-num">3</div>
+      <div class="p-text"><strong>6개월은 관심 종목 리스트만 만든다</strong> — 팟캐스트 종목을 n8n 보고서로 추적하되, 매수는 보류합니다. 주가 흐름을 지켜보는 훈련이 먼저입니다.</div>
+    </li>
+  </ul>
+</div>
+
+<!-- 주간 캘린더 -->
+<div class="card">
+  <h2>주간 학습 캘린더</h2>
+  <div class="calendar">
+
+    <!-- 월 -->
+    <div class="day-card">
+      <div class="day-name">월요일</div>
+      <div class="time-block">
+        <div class="time-label">🌅 07-08시</div>
+        <div class="task morning">🎧 아침수업 청취<br>그날의 시장 관점</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">🌙 21-22시</div>
+        <div class="task evening">🔁 당일 팟캐스트 복습<br>종목·산업 연결</div>
+      </div>
+    </div>
+
+    <!-- 화 -->
+    <div class="day-card">
+      <div class="day-name">화요일</div>
+      <div class="time-block">
+        <div class="time-label">🌅 07-08시</div>
+        <div class="task morning">🎧 아침수업 청취<br>+ 주식 단어장</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">🌙 21-22시</div>
+        <div class="task evening">📄 학습기업 점검 읽기<br>n8n 보고서 연결</div>
+      </div>
+    </div>
+
+    <!-- 수 -->
+    <div class="day-card">
+      <div class="day-name">수요일</div>
+      <div class="time-block">
+        <div class="time-label">🌅 07-08시</div>
+        <div class="task morning">🎧 아침수업 청취<br>학습알림장 팟캐스트</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">🌙 21-22시</div>
+        <div class="task evening">🔁 팟캐스트 복습<br>관심 종목 주가 확인</div>
+      </div>
+    </div>
+
+    <!-- 목 -->
+    <div class="day-card">
+      <div class="day-name">목요일</div>
+      <div class="time-block">
+        <div class="time-label">🌅 07-08시</div>
+        <div class="task morning">🎧 아침수업 청취<br>+ 주식 단어장</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">🌙 21-22시</div>
+        <div class="task evening">📄 학습기업 점검 읽기<br>강세·약세 기업 체크</div>
+      </div>
+    </div>
+
+    <!-- 금 -->
+    <div class="day-card">
+      <div class="day-name">금요일</div>
+      <div class="time-block">
+        <div class="time-label">🌅 07-08시</div>
+        <div class="task morning">🎧 아침수업 청취<br>학습알림장 팟캐스트</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">🌙 21-22시</div>
+        <div class="task evening">📝 주간 정리<br>언급 종목 3개 메모<br>주말 준비</div>
+      </div>
+    </div>
+
+    <!-- 토 -->
+    <div class="day-card saturday">
+      <div class="day-name">토요일 3h</div>
+      <div class="time-block">
+        <div class="time-label">1시간</div>
+        <div class="task weekend-main">📺 가장빠른 투자수업<br>주간 핵심 영상 시청</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">1시간</div>
+        <div class="task weekend-main">📊 n8n HTML 보고서<br>병목·촉매·밸류체인</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">1시간</div>
+        <div class="task weekend-sub">🔍 관심 종목 1개<br>5체크리스트 직접 작성</div>
+      </div>
+    </div>
+
+    <!-- 일 -->
+    <div class="day-card sunday">
+      <div class="day-name">일요일 3h</div>
+      <div class="time-block">
+        <div class="time-label">1시간</div>
+        <div class="task weekend-main">📺 실전 복기수업<br>또는 동행 클럽 영상</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">1시간</div>
+        <div class="task weekend-main">🌐 다음 주 이슈 파악<br>미국 경제지표 일정</div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">1시간</div>
+        <div class="task weekend-sub">📔 투자 일지 작성<br>배운 것 1가지<br>다음 주 집중 1가지</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 시리즈 가이드 -->
+<div class="card">
+  <h2>시리즈별 활용 가이드</h2>
+  <div class="series-grid">
+    <div class="series-card">
+      <div class="series-name">🎧 느린부자 투자수업</div>
+      <div class="series-meta">매일 2~4개 업로드 · AUDIO 중심</div>
+      <div class="series-desc">핵심 메인 강의. 아침수업(6~8분)은 매일 필수. 팟캐스트는 산업·종목 심층 분석.</div>
+      <span class="series-when when-morning">🌅 출근길 필수</span>
+    </div>
+    <div class="series-card">
+      <div class="series-name">📖 월간 나침반</div>
+      <div class="series-meta">주 2~3개 · AUDIO</div>
+      <div class="series-desc">주식 단어장(매주 5개 용어)과 학습알림장으로 구성. 입문자 필수 코스.</div>
+      <span class="series-when when-morning">🌅 출근길 보조</span>
+    </div>
+    <div class="series-card">
+      <div class="series-name">📺 가장빠른 투자수업</div>
+      <div class="series-meta">주 1회 · VIDEO 10~55분</div>
+      <div class="series-desc">주간 핵심 주제 압축 영상. 그 주의 맥락을 한 번에 정리할 수 있음.</div>
+      <span class="series-when when-weekend">📖 토요일 1순위</span>
+    </div>
+    <div class="series-card">
+      <div class="series-name">🎬 실전 복기수업</div>
+      <div class="series-meta">비정기 · VIDEO 20~30분</div>
+      <div class="series-desc">장중 브리핑·아침수업 풀버전. 개념이 어느 정도 쌓인 후 시청 권장.</div>
+      <span class="series-when when-weekend">📖 일요일 심화</span>
+    </div>
+    <div class="series-card">
+      <div class="series-name">📄 학습기업 점검</div>
+      <div class="series-meta">주 1회 · ARTICLE</div>
+      <div class="series-desc">강세·약세 기업 주간 리포트. n8n 자동화 보고서와 연결해서 확인.</div>
+      <span class="series-when when-evening">🌙 저녁 읽기</span>
+    </div>
+    <div class="series-card">
+      <div class="series-name">🏫 슬기로운 동행 클럽</div>
+      <div class="series-meta">비정기 · VIDEO 50분+</div>
+      <div class="series-desc">오프라인 강의 풀버전. 반응 수 최고(749). 여유 있는 주말 집중 시청.</div>
+      <span class="series-when when-weekend">📖 주말 특강</span>
+    </div>
+  </div>
+</div>
+
+<!-- 모델 가이드 -->
+<div class="card">
+  <h2>Claude 모델 활용 가이드</h2>
+  <div class="model-grid">
+    <div class="model-card">
+      <div class="model-name">Claude Sonnet 4.6</div>
+      <div class="model-use">강의 분석 자동화 (n8n)</div>
+      <div class="model-desc">현재 n8n AI Agent에 연결된 모델. 강의 요약·종목 추출·텔레그램 발송에 최적화.</div>
+      <span class="model-badge">n8n 기본 설정</span>
+    </div>
+    <div class="model-card">
+      <div class="model-name">Claude Opus 4.6</div>
+      <div class="model-use">종목 심층 분석 · 밸류체인</div>
+      <div class="model-desc">복잡한 다층 구조 분석에 적합. 종목 질문·포트폴리오 전략 수립 시 수동 전환.</div>
+      <span class="model-badge">심층 분석 시 전환</span>
+    </div>
+  </div>
+  <div style="margin-top:12px;font-size:12px;color:var(--muted);background:#f8f9fb;padding:10px 14px;border-radius:8px">
+    💡 모델 전환 방법: Claude.ai 웹/앱 대화창 좌측 하단 모델 선택 드롭다운에서 수동 변경. 종목 심층 분석 질문 시 Opus로, 일반 질문은 Sonnet 유지.
+  </div>
+</div>
+
+<div class="foot">박두환 투자동행학교 맞춤 학습 플랜 · "주가는 결국 내재가치에 수렴한다"</div>
+</div>
+</body>
+</html>
