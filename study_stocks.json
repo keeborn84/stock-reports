@@ -1,1 +1,7 @@
-{{ $json.content }}
+[
+  { "name": "이수페타시스", "code": "007660", "market": "KR" },
+  { "name": "두산",         "code": "000150", "market": "KR" },
+  { "name": "코리아써키트",  "code": "007810", "market": "KR" },
+  { "name": "APH",          "code": "APH",    "market": "US" },
+  { "name": "TTM",          "code": "TTM",     "market": "US" }
+]
