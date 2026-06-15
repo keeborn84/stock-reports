@@ -23,5 +23,50 @@
     "name": "TTM",
     "code": "TTM",
     "market": "US"
+  },
+  {
+    "name": "네이버",
+    "code": "035420",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버-소버린AI풀스택공급(LLM+클라우드), 삼성SDS/LGCNS-국내데이터센터구축, SKT-통신인프라연계AI, 한컴-공공AI소버린솔루션, NVDA-GPU핵심공급, MSFT/AMZN/GOOGL-하이퍼스케일클라우드경쟁자, ARM-AI칩설계기반",
+    "mentionCount": 1
+  },
+  {
+    "name": "삼성SDS",
+    "code": "018260",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버-소버린AI풀스택공급(LLM+클라우드), 삼성SDS/LGCNS-국내데이터센터구축, SKT-통신인프라연계AI, 한컴-공공AI소버린솔루션, NVDA-GPU핵심공급, MSFT/AMZN/GOOGL-하이퍼스케일클라우드경쟁자, ARM-AI칩설계기반",
+    "mentionCount": 1
+  },
+  {
+    "name": "LG CNS",
+    "code": "064700",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버-소버린AI풀스택공급(LLM+클라우드), 삼성SDS/LGCNS-국내데이터센터구축, SKT-통신인프라연계AI, 한컴-공공AI소버린솔루션, NVDA-GPU핵심공급, MSFT/AMZN/GOOGL-하이퍼스케일클라우드경쟁자, ARM-AI칩설계기반",
+    "mentionCount": 1
+  },
+  {
+    "name": "SK텔레콤",
+    "code": "017670",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버-소버린AI풀스택공급(LLM+클라우드), 삼성SDS/LGCNS-국내데이터센터구축, SKT-통신인프라연계AI, 한컴-공공AI소버린솔루션, NVDA-GPU핵심공급, MSFT/AMZN/GOOGL-하이퍼스케일클라우드경쟁자, ARM-AI칩설계기반",
+    "mentionCount": 1
+  },
+  {
+    "name": "한글과컴퓨터",
+    "code": "030520",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버-소버린AI풀스택공급(LLM+클라우드), 삼성SDS/LGCNS-국내데이터센터구축, SKT-통신인프라연계AI, 한컴-공공AI소버린솔루션, NVDA-GPU핵심공급, MSFT/AMZN/GOOGL-하이퍼스케일클라우드경쟁자, ARM-AI칩설계기반",
+    "mentionCount": 1
   }
 ]
