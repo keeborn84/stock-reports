@@ -31,7 +31,7 @@
     "addedDate": "2026-06-15",
     "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
     "valueChain": "네이버-소버린AI풀스택공급(LLM+클라우드), 삼성SDS/LGCNS-국내데이터센터구축, SKT-통신인프라연계AI, 한컴-공공AI소버린솔루션, NVDA-GPU핵심공급, MSFT/AMZN/GOOGL-하이퍼스케일클라우드경쟁자, ARM-AI칩설계기반",
-    "mentionCount": 1
+    "mentionCount": 2
   },
   {
     "name": "삼성SDS",
@@ -67,6 +67,42 @@
     "addedDate": "2026-06-15",
     "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
     "valueChain": "네이버-소버린AI풀스택공급(LLM+클라우드), 삼성SDS/LGCNS-국내데이터센터구축, SKT-통신인프라연계AI, 한컴-공공AI소버린솔루션, NVDA-GPU핵심공급, MSFT/AMZN/GOOGL-하이퍼스케일클라우드경쟁자, ARM-AI칩설계기반",
+    "mentionCount": 1
+  },
+  {
+    "name": "카카오",
+    "code": "035720",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버(소버린 AI 인프라 수출·LLM 제공), 카카오(국내 AI 모델 보유), 에스넷시스템(데이터센터 네트워크 구축), HD현대일렉트릭·LS ELECTRIC(데이터센터 전력 인프라), NVDA(GPU 공급), AMZN·MSFT·GOOGL(퍼블릭 클라우드·AI 플랫폼), ANET(데이터센터 네트워킹)",
+    "mentionCount": 1
+  },
+  {
+    "name": "에스넷시스템",
+    "code": "081530",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버(소버린 AI 인프라 수출·LLM 제공), 카카오(국내 AI 모델 보유), 에스넷시스템(데이터센터 네트워크 구축), HD현대일렉트릭·LS ELECTRIC(데이터센터 전력 인프라), NVDA(GPU 공급), AMZN·MSFT·GOOGL(퍼블릭 클라우드·AI 플랫폼), ANET(데이터센터 네트워킹)",
+    "mentionCount": 1
+  },
+  {
+    "name": "HD현대일렉트릭",
+    "code": "267260",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버(소버린 AI 인프라 수출·LLM 제공), 카카오(국내 AI 모델 보유), 에스넷시스템(데이터센터 네트워크 구축), HD현대일렉트릭·LS ELECTRIC(데이터센터 전력 인프라), NVDA(GPU 공급), AMZN·MSFT·GOOGL(퍼블릭 클라우드·AI 플랫폼), ANET(데이터센터 네트워킹)",
+    "mentionCount": 1
+  },
+  {
+    "name": "LS ELECTRIC",
+    "code": "010120",
+    "market": "KR",
+    "addedDate": "2026-06-15",
+    "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
+    "valueChain": "네이버(소버린 AI 인프라 수출·LLM 제공), 카카오(국내 AI 모델 보유), 에스넷시스템(데이터센터 네트워크 구축), HD현대일렉트릭·LS ELECTRIC(데이터센터 전력 인프라), NVDA(GPU 공급), AMZN·MSFT·GOOGL(퍼블릭 클라우드·AI 플랫폼), ANET(데이터센터 네트워킹)",
     "mentionCount": 1
   }
 ]
