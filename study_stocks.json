@@ -99,5 +99,50 @@
     "sourceLecture": "[6월 15일] [팟캐스트] AI 산업의 새로운 화두, 소버린 AI와 인프라 경쟁",
     "valueChain": "네이버(소버린 AI 인프라 수출·LLM 제공), 카카오(국내 AI 모델 보유), 에스넷시스템(데이터센터 네트워크 구축), HD현대일렉트릭·LS ELECTRIC(데이터센터 전력 인프라), NVDA(GPU 공급), AMZN·MSFT·GOOGL(퍼블릭 클라우드·AI 플랫폼), ANET(데이터센터 네트워킹)",
     "mentionCount": 1
+  },
+  {
+    "name": "벽산",
+    "code": "007210",
+    "market": "KR",
+    "addedDate": "2026-06-17",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "벽산·LX하우시스(단열·인테리어 소재 제조), KCC(도료·실리콘 소재 제조), 동화기업(건축소재·인프라 설계), GS건설(시공·플랜트 최종단)",
+    "mentionCount": 1
+  },
+  {
+    "name": "KCC",
+    "code": "002380",
+    "market": "KR",
+    "addedDate": "2026-06-17",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "벽산·LX하우시스(단열·인테리어 소재 제조), KCC(도료·실리콘 소재 제조), 동화기업(건축소재·인프라 설계), GS건설(시공·플랜트 최종단)",
+    "mentionCount": 1
+  },
+  {
+    "name": "LX하우시스",
+    "code": "108670",
+    "market": "KR",
+    "addedDate": "2026-06-17",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "벽산·LX하우시스(단열·인테리어 소재 제조), KCC(도료·실리콘 소재 제조), 동화기업(건축소재·인프라 설계), GS건설(시공·플랜트 최종단)",
+    "mentionCount": 1
+  },
+  {
+    "name": "동화기업",
+    "code": "025900",
+    "market": "KR",
+    "addedDate": "2026-06-17",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "벽산·LX하우시스(단열·인테리어 소재 제조), KCC(도료·실리콘 소재 제조), 동화기업(건축소재·인프라 설계), GS건설(시공·플랜트 최종단)",
+    "mentionCount": 1
+  },
+  {
+    "name": "GS건설",
+    "code": "006360",
+    "market": "KR",
+    "addedDate": "2026-06-17",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "벽산·LX하우시스(단열·인테리어 소재 제조), KCC(도료·실리콘 소재 제조), 동화기업(건축소재·인프라 설계), GS건설(시공·플랜트 최종단)",
+    "mentionCount": 1
   }
 ]
