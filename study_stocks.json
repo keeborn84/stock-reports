@@ -178,5 +178,45 @@
     "sourceLecture": "[학습기업 차트 한 바퀴] 건설·환경·건설기계 핵심 기업 점검",
     "valueChain": "벽산·LX하우시스(단열·인테리어 소재 제조), KCC(도료·실리콘 소재 제조), 동화기업(건축소재·인프라 설계), GS건설(시공·플랜트 최종단)",
     "mentionCount": 1
+  },
+  {
+    "name": "삼성물산",
+    "code": "028260",
+    "market": "KR",
+    "hsCode": null,
+    "addedDate": "2026-06-23",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 지주사·복합기업, 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "삼성물산-그룹지주/에너지인프라, HDC-지주/건설유화, DL이앤씨-대형건설/SMR, 아이에스동서-건설소재/폐배터리순환",
+    "mentionCount": 1
+  },
+  {
+    "name": "HDC",
+    "code": "012630",
+    "market": "KR",
+    "hsCode": null,
+    "addedDate": "2026-06-23",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 지주사·복합기업, 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "삼성물산-그룹지주/에너지인프라, HDC-지주/건설유화, DL이앤씨-대형건설/SMR, 아이에스동서-건설소재/폐배터리순환",
+    "mentionCount": 1
+  },
+  {
+    "name": "DL이앤씨",
+    "code": "375500",
+    "market": "KR",
+    "hsCode": null,
+    "addedDate": "2026-06-23",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 지주사·복합기업, 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "삼성물산-그룹지주/에너지인프라, HDC-지주/건설유화, DL이앤씨-대형건설/SMR, 아이에스동서-건설소재/폐배터리순환",
+    "mentionCount": 1
+  },
+  {
+    "name": "아이에스동서",
+    "code": "010780",
+    "market": "KR",
+    "hsCode": null,
+    "addedDate": "2026-06-23",
+    "sourceLecture": "[학습기업 차트 한 바퀴] 지주사·복합기업, 건설·환경·건설기계 핵심 기업 점검",
+    "valueChain": "삼성물산-그룹지주/에너지인프라, HDC-지주/건설유화, DL이앤씨-대형건설/SMR, 아이에스동서-건설소재/폐배터리순환",
+    "mentionCount": 1
   }
 ]
